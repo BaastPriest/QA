@@ -1,1 +1,1 @@
-# SirenGroupQAUItests
+# booking api tests
