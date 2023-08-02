@@ -6,14 +6,10 @@ import url
 def create_booking(body):
     return requests.post(url.URL + url.CREATE_BOOKING, json=body)
 
-# print(create_booking())
-
-
 # def change_booking_body():
 #     new_booking_body = data.booking_body.copy()
 #     new_booking_body["firstname"] = "AAA"
 #     return new_booking_body
-
 
 #параметризация
 def change_booking_body(field, name):
@@ -30,7 +26,7 @@ def delite_booking(id_booking):
     headers = data.header.copy()
     headers["Cookie"] = "token=" + create_token()   # формат Header в API DeleteBooking
     req = requests.delete(url.URL + url.DELETE_BOOKING + str(id_booking),  # метод delete
-                          headers =headers)
+                          headers = headers)
     return req
 
 
